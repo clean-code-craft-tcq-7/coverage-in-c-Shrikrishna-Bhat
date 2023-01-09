@@ -7,9 +7,9 @@ typedef enum {
 } CoolingType;
 
 typedef enum {
-  NORMAL,
-  TOO_LOW,
-  TOO_HIGH
+  NORMAL = 0,
+  TOO_LOW = 1,
+  TOO_HIGH = 2
 } BreachType;
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit);
