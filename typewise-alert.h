@@ -27,6 +27,12 @@ typedef struct{
   int upperLimit;
 } coolingLimitType;
 
+typedef struct {
+  int normall
+  int too_low;
+  int too_high;
+} BreachstructType;
+
 BreachType inferBreach(double value, double lowerLimit, double upperLimit);
 BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC);
 
