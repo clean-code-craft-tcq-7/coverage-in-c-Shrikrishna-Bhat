@@ -1,6 +1,8 @@
 #include "typewise-alert.h"
 #include <stdio.h>
 
+static coolingLimitType TypesOfLimitCooling(CoolingType coolingType);
+
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
     return TOO_LOW;
@@ -11,7 +13,7 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   return NORMAL;
 }
 
-coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
+static coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
 {
   coolingLimitType coolingLimitTypeReturn;
   CoolingType CoolingType_en;
