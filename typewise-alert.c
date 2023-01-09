@@ -27,24 +27,12 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
 {
   int lowerLimit = 0;
   int upperLimit = 0;
-  int coolingTypeReturnValue;
+  coolingLimitType coolingTypeReturnValue;
   
   coolingTypeReturnValue = TypesOfLimitCooling(CoolingType coolingType);
+  lowerLimit = coolingTypeReturnValue.lowerLimit ;
+  upperLimit = coolingTypeReturnValue.upperLimit ;
   
-  switch(coolingType) {
-    case PASSIVE_COOLING:
-      lowerLimit = 0;
-      upperLimit = 35;
-      break;
-    case HI_ACTIVE_COOLING:
-      lowerLimit = 0;
-      upperLimit = 45;
-      break;
-    case MED_ACTIVE_COOLING:
-      lowerLimit = 0;
-      upperLimit = 40;
-      break;
-  }
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
 
