@@ -18,18 +18,7 @@ coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
   coolingLimitTypeReturn.lowerLimit = 0;
   coolingLimitTypeReturn.upperLimit = 0;
   
-  if (coolingType == CoolingType_en.PASSIVE_COOLING)
-  {
-    coolingLimitTypeReturn.upperLimit = 35;
-  }
-  else if (coolingType == CoolingType_en.HI_ACTIVE_COOLING)
-  {
-    coolingLimitTypeReturn.upperLimit = 45;
-  }
-  else
-  {
-    coolingLimitTypeReturn.upperLimit = 40;
-  }
+  (coolingType == CoolingType_en.PASSIVE_COOLING) ? coolingLimitTypeReturn.upperLimit = 35 : ((coolingType == CoolingType_en.HI_ACTIVE_COOLING) ? coolingLimitTypeReturn.upperLimit = 45 : coolingLimitTypeReturn.upperLimit = 40)
   
   return coolingLimitTypeReturn;
 }
