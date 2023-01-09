@@ -13,7 +13,25 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
 
 coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
 {
+  coolingLimitType coolingLimitTypeReturn;
+  CoolingType CoolingType_en;
+  coolingLimitTypeReturn.lowerLimit = 0;
+  coolingLimitTypeReturn.upperLimit = 0;
   
+  if (coolingType == CoolingType_en.PASSIVE_COOLING)
+  {
+    coolingLimitTypeReturn.upperLimit = 35;
+  }
+  else if (coolingType == CoolingType_en.HI_ACTIVE_COOLING)
+  {
+    coolingLimitTypeReturn.upperLimit = 45;
+  }
+  else
+  {
+    coolingLimitTypeReturn.upperLimit = 40;
+  }
+  
+  return coolingLimitTypeReturn;
 }
 
 BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC) 
