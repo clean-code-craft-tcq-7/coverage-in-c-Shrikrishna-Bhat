@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 static coolingLimitType TypesOfLimitCooling(CoolingType coolingType);
+static breachStructType MailBreachType(BreachType breachType);
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
