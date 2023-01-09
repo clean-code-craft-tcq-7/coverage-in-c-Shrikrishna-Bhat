@@ -83,5 +83,4 @@ void sendToEmail(BreachType breachType) {
   const char* recepient = "a.b@c.com";
   printf("To: %s\n", recepient);
   breachStructType_returnType = MailBreachType(breachType);
-
 }
