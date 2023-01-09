@@ -11,11 +11,18 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   return NORMAL;
 }
 
-BreachType classifyTemperatureBreach(
-    CoolingType coolingType, double temperatureInC) {
+coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
+{
+  
+}
+
+BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC) 
+{
   int lowerLimit = 0;
   int upperLimit = 0;
   int coolingTypeReturnValue;
+  
+  coolingTypeReturnValue = TypesOfLimitCooling(CoolingType coolingType);
   
   switch(coolingType) {
     case PASSIVE_COOLING:
