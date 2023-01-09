@@ -12,8 +12,6 @@ typedef enum {
   TOO_HIGH = 2
 } BreachType;
 
-
-
 typedef enum {
   TO_CONTROLLER = 0,
   TO_EMAIL = 1
