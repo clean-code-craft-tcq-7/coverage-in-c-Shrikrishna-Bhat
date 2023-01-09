@@ -65,12 +65,10 @@ static breachStructType MailBreachType(BreachType breachType)
   
   if (breachType == BreachType_enum.TOO_LOW)
   {
-      printf("To: %s\n", recepient);
       printf("Hi, the temperature is too low\n");
   }
   else if (breachType == BreachType_enum.TOO_HIGH)
   {
-      printf("To: %s\n", recepient);
       printf("Hi, the temperature is too high\n");
   }
   else
@@ -82,6 +80,7 @@ static breachStructType MailBreachType(BreachType breachType)
 void sendToEmail(BreachType breachType) {
   breachStructType breachStructType_returnType;
   const char* recepient = "a.b@c.com";
-  
+  printf("To: %s\n", recepient);
   breachStructType_returnType = MailBreachType(breachType);
+
 }
