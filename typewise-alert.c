@@ -29,7 +29,7 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
   int upperLimit = 0;
   coolingLimitType coolingTypeReturnValue;
   
-  coolingTypeReturnValue = TypesOfLimitCooling(CoolingType coolingType);
+  coolingTypeReturnValue = TypesOfLimitCooling(coolingType);
   lowerLimit = coolingTypeReturnValue.lowerLimit ;
   upperLimit = coolingTypeReturnValue.upperLimit ;
   
