@@ -75,6 +75,7 @@ static breachStructType MailBreachType(BreachType breachType)
   {
     // NORMAL
   }
+  return;
 }
 
 void sendToEmail(BreachType breachType) {
