@@ -28,7 +28,7 @@ typedef struct{
 } coolingLimitType;
 
 typedef struct {
-  int normall
+  int normal;
   int too_low;
   int too_high;
 } BreachstructType;
