@@ -28,7 +28,7 @@ typedef struct {
 typedef struct{
   int lowerLimit;
   int upperLimit;
-}coolingType;
+}coolingLimitType;
 
 void checkAndAlert(
   AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
