@@ -12,12 +12,11 @@ typedef enum {
   TOO_HIGH = 2
 } BreachType;
 
-BreachType inferBreach(double value, double lowerLimit, double upperLimit);
-BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC);
+
 
 typedef enum {
-  TO_CONTROLLER,
-  TO_EMAIL
+  TO_CONTROLLER = 0,
+  TO_EMAIL = 1
 } AlertTarget;
 
 typedef struct {
@@ -30,8 +29,12 @@ typedef struct{
   int upperLimit;
 }coolingLimitType;
 
+BreachType inferBreach(double value, double lowerLimit, double upperLimit);
+BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC);
+
 void checkAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
 
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
+
 extern coolingLimitType TypesOfLimitCooling(CoolingType coolingType);
