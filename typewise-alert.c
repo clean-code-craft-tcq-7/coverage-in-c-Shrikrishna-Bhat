@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 static coolingLimitType TypesOfLimitCooling(CoolingType coolingType);
-static breachStructType MailBreachType(BreachType breachType);
+static void MailBreachType(BreachType breachType);
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
@@ -59,7 +59,7 @@ void sendToController(BreachType breachType) {
   printf("%x : %x\n", header, breachType);
 }
 
-static breachStructType MailBreachType(BreachType breachType)
+static void MailBreachType(BreachType breachType)
 {
   BreachType BreachType_enum;
   
@@ -75,7 +75,6 @@ static breachStructType MailBreachType(BreachType breachType)
   {
     // NORMAL
   }
-  return;
 }
 
 void sendToEmail(BreachType breachType) {
