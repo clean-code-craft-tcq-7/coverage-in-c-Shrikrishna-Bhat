@@ -18,8 +18,9 @@ TEST_CASE("infers the breach according to limits") {
   /*
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 12) == NORMAL);
   */
-  /* sendToController testcases */
+  /* sendToController testcases 
   REQUIRE(sendToController(NORMAL));
   REQUIRE(sendToController(TOO_LOW));
   REQUIRE(sendToController(TOO_HIGH));
+  */
 }
