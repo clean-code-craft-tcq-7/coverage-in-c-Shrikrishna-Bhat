@@ -5,7 +5,7 @@
 
 TEST_CASE("infers the breach according to limits") {
   REQUIRE(inferBreach(12, 20, 30) == TOO_LOW);
-  
+  /* InferBreach new testcases */
   REQUIRE(inferBreach(35, 20, 30) == TOO_HIGH);
   REQUIRE(classifyTemperatureBreach(PASSIVE_COOLING, 12) == NORMAL);
 }
