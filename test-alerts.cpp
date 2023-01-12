@@ -38,3 +38,7 @@ TEST_CASE("classifyTemperatureBreach TOO_HIGH")
 {
   REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 41) == TOO_HIGH);
 }
+TEST_CASE("classifyTemperatureBreach MED_ACTIVE_COOLING NORMAL")
+{
+  REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 12) == NORMAL);
+}
