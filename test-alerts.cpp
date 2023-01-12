@@ -4,6 +4,9 @@
 #include "typewise-alert.h"
 #include "string.h"
 
+BatteryCharacter batteryCharacter1;
+BatteryCharacter batteryCharacter2;
+
 TEST_CASE("infers the breach according to limits TOO_LOW")
 {
   REQUIRE(inferBreach(12, 20, 30) == TOO_LOW);
