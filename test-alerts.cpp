@@ -81,20 +81,20 @@ TEST_CASE("send email alert low -> TO_EMAIL PASSIVE_COOLING inferBreach:NORMAL s
 }
 
 /* TO_CONTROLLER PASSIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH */
-TEST_CASE("send email alert high -> TO_EMAIL PASSIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH")
+TEST_CASE("To controller alert high -> TO_CONTROLLER PASSIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH")
 {
   batteryCharacter1.coolingType = PASSIVE_COOLING;
   checkAndAlert(TO_CONTROLLER, batteryCharacter1, 36);
   //REQUIRE(checkAndAlert(TO_EMAIL, batteryCharacter1, 36));
 }
 /* TO_CONTROLLER PASSIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW */
-TEST_CASE("send email alert low -> TO_EMAIL PASSIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW")
+TEST_CASE("To controller alert low -> TO_CONTROLLER PASSIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW")
 {
   batteryCharacter1.coolingType = PASSIVE_COOLING;
   checkAndAlert(TO_CONTROLLER, batteryCharacter1, -1);
 }
 /* TO_CONTROLLER PASSIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL */
-TEST_CASE("send email alert low -> TO_EMAIL PASSIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL")
+TEST_CASE("To controller alert low -> TO_CONTROLLER PASSIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL")
 {
   batteryCharacter1.coolingType = PASSIVE_COOLING;
   checkAndAlert(TO_CONTROLLER, batteryCharacter1, 0);
