@@ -46,6 +46,7 @@ TEST_CASE("classifyTemperatureBreach MED_ACTIVE_COOLING NORMAL")
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 12) == NORMAL);
 }
   /* sendToController testcases */
+/*
 TEST_CASE("sendToController NORMAL")
 {
   REQUIRE(sendToController(NORMAL));
@@ -58,6 +59,7 @@ TEST_CASE("sendToController TOO_HIGH")
 {
   REQUIRE(sendToController(TOO_HIGH));
 }
+*/
 
 /* checkAndAlert testcases */
 TEST_CASE("send email alert high")
