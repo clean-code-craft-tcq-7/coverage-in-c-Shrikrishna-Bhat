@@ -68,7 +68,7 @@ TEST_CASE("send email alert high")
   //REQUIRE(checkAndAlert(TO_EMAIL, batteryCharacter1, 36));
 }
 /* TO_EMAIL PASSIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW */
-TEST_CASE("send email alert high")
+TEST_CASE("send email alert low")
 {
   batteryCharacter1.coolingType = PASSIVE_COOLING;
   checkAndAlert(TO_EMAIL, batteryCharacter1, -1);
