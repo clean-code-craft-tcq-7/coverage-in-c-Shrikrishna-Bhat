@@ -18,7 +18,23 @@ TEST_CASE("infers the breach according to limits NORMAL")
   REQUIRE(inferBreach(20, 20, 20) == NORMAL);
 }
   /* classifyTemperatureBreach testcases */
-TEST_CASE("classifyTemperatureBreach")
+TEST_CASE("classifyTemperatureBreach PASSIVE_COOLING")
 {
   REQUIRE(classifyTemperatureBreach(PASSIVE_COOLING, 12) == NORMAL);
+}
+TEST_CASE("classifyTemperatureBreach HI_ACTIVE_COOLING")
+{
+  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 12) == NORMAL);
+}
+TEST_CASE("classifyTemperatureBreach MED_ACTIVE_COOLING")
+{
+  REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 12) == NORMAL);
+}
+TEST_CASE("classifyTemperatureBreach TOO_LOW")
+{
+  REQUIRE(classifyTemperatureBreach(PASSIVE_COOLING, -1) == TOO_LOW);
+}
+TEST_CASE("classifyTemperatureBreach TOO_HIGH")
+{
+  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 41) == TOO_HIGH);
 }
