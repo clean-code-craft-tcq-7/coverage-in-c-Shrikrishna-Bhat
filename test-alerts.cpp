@@ -139,3 +139,23 @@ TEST_CASE("To controller alert low -> TO_CONTROLLER HI_ACTIVE_COOLING inferBreac
   batteryCharacter1.coolingType = HI_ACTIVE_COOLING;
   checkAndAlert(TO_CONTROLLER, batteryCharacter1, 0);
 }
+
+/* TO_EMAIL MED_ACTIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH */
+TEST_CASE("send email alert high -> TO_EMAIL MED_ACTIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH")
+{
+  batteryCharacter1.coolingType = MED_ACTIVE_COOLING;
+  checkAndAlert(TO_EMAIL, batteryCharacter1, 46);
+  //REQUIRE(checkAndAlert(TO_EMAIL, batteryCharacter1, 41));
+}
+/* TO_EMAIL MED_ACTIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW */
+TEST_CASE("send email alert low -> TO_EMAIL MED_ACTIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW")
+{
+  batteryCharacter1.coolingType = MED_ACTIVE_COOLING;
+  checkAndAlert(TO_EMAIL, batteryCharacter1, -1);
+}
+/* TO_EMAIL MED_ACTIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL */
+TEST_CASE("send email alert low -> TO_EMAIL MED_ACTIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL")
+{
+  batteryCharacter1.coolingType = MED_ACTIVE_COOLING;
+  checkAndAlert(TO_EMAIL, batteryCharacter1, 0);
+}
