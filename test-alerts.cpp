@@ -4,8 +4,11 @@
 #include "typewise-alert.h"
 #include "string.h"
 
+#define PASSIVE_COOLING_MACRO 0
+#define HI_ACTIVE_COOLING_MACRO 1
+#define MED_ACTIVE_COOLING_MACRO 2
+
 BatteryCharacter batteryCharacter1;
-BatteryCharacter batteryCharacter2;
 
 TEST_CASE("infers the breach according to limits TOO_LOW")
 {
@@ -102,19 +105,19 @@ TEST_CASE("To controller alert low -> TO_CONTROLLER PASSIVE_COOLING inferBreach:
 TEST_CASE("send email alert high -> TO_EMAIL HI_ACTIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH")
 {
   batteryCharacter1.coolingType = HI_ACTIVE_COOLING;
-  checkAndAlert(TO_EMAIL, batteryCharacter1, 50);
+  checkAndAlert(TO_EMAIL, HI_ACTIVE_COOLING_MACRO, 50);
 }
 /* TO_EMAIL HI_ACTIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW */
 TEST_CASE("send email alert low -> TO_EMAIL HI_ACTIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW")
 {
   batteryCharacter1.coolingType = HI_ACTIVE_COOLING;
-  checkAndAlert(TO_EMAIL, batteryCharacter1, -1);
+  checkAndAlert(TO_EMAIL, HI_ACTIVE_COOLING_MACRO, -1);
 }
 /* TO_EMAIL HI_ACTIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL */
 TEST_CASE("send email alert low -> TO_EMAIL HI_ACTIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL")
 {
   batteryCharacter1.coolingType = HI_ACTIVE_COOLING;
-  checkAndAlert(TO_EMAIL, batteryCharacter1, 0);
+  checkAndAlert(TO_EMAIL, HI_ACTIVE_COOLING_MACRO, 0);
 }
 
 /* TO_CONTROLLER HI_ACTIVE_COOLING inferBreach:TOO_HIGH sendToEmail:TOO_HIGH */
