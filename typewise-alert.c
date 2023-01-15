@@ -26,7 +26,7 @@ static coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
   {
     coolingLimitTypeReturn.upperLimit = 35;
   }
-  else if (coolingType == CoolingType_en == 1)
+  else if (coolingType == HI_ACTIVE_COOLING == 1)
   {
     coolingLimitTypeReturn.upperLimit = 45;
   }
