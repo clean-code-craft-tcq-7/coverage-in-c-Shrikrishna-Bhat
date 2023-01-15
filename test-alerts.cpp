@@ -107,7 +107,7 @@ TEST_CASE("send email alert high -> TO_EMAIL HI_ACTIVE_COOLING inferBreach:TOO_H
 TEST_CASE("send email alert low -> TO_EMAIL HI_ACTIVE_COOLING inferBreach:TOO_LOW sendToEmail:TOO_LOW")
 {
   batteryCharacter1.coolingType = HI_ACTIVE_COOLING;
-  checkAndAlert(TO_EMAIL, batteryCharacter1, -1);
+  checkAndAlert(TO_EMAIL, batteryCharacter1, -1.0);
 }
 /* TO_EMAIL HI_ACTIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL */
 TEST_CASE("send email alert low -> TO_EMAIL HI_ACTIVE_COOLING inferBreach:NORMAL sendToEmail:NORMAL")
