@@ -30,12 +30,9 @@ static coolingLimitType TypesOfLimitCooling(CoolingType coolingType)
   {
     coolingLimitTypeReturn.upperLimit = 45;
   }
-  else if (coolingType == MED_ACTIVE_COOLING == 2)
-  {
-    coolingLimitTypeReturn.upperLimit = 40;
-  }
   else
   {
+    coolingLimitTypeReturn.upperLimit = 40;
   }
   
   return coolingLimitTypeReturn;
